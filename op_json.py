@@ -1,50 +1,56 @@
 from gevent import monkey
 monkey.patch_all()
 from queue import Queue
-import json,csv,gevent,math
+import json,csv,gevent,math,os
 
-
-with open(r'/Users/apple/Desktop/day2/now03.csv') as fulldata:
+abs_path = '/Users/apple/Desktop/op_savecsv/'
+with open(abs_path+'complete_data.csv') as fulldata:
     data = fulldata.readlines()
 
 
-now_class = input('请输入目前阶段: 1、山脚   2、山腰   3、山顶  \n')
+
+while True:
+    now_class = input('which class? please input number\n 1、山脚   2、山腰   3、山顶  \n')
+    if now_class in ['1','2','3']:
+        break
+
+
 def write_each(filename,index):
     #so quick that we can't see this content....
     print('第{}个文件写入中'.format(index+1),end="")
     print("\b"*20,end="",flush=True)
 
-    #set a step to distingish between different levels 
+    #to distingish between 3 classes. 'index' has to be divided by '2', get high step's number and low's at line 37 condition
     if now_class == '2':
         level = math.ceil(index/2) + 5    
     elif now_class == '3':
         level = math.ceil(index/2) + 10
     else:
-        level = index  
+        level = math.ceil(index/2)  
             
-    #put different data into target csv
+    #put different datas into target csv
     if index == 0:
-        with open(r'/Users/apple/Desktop/output/bottom.csv','w') as filewrite:
+        with open(abs_path + 'separate_csv/bottom.csv','w') as filewrite:
             writer = csv.writer(filewrite)
             writer.writerows(filename)
 
     elif 11 > index > 0:    
-
+        #divide the high process and the low
         if index % 2 == 0:
-            with open(r'/Users/apple/Desktop/output/{}.csv'.format(str(level)+'_h'),'w') as filewrite:
+            with open(abs_path + 'separate_csv/{}.csv'.format(str(level)+'_h'),'w') as filewrite:
                 writer = csv.writer(filewrite)
                 writer.writerows(filename)
         else:
-            with open(r'/Users/apple/Desktop/output/{}.csv'.format(str(level)+'_l'),'w') as filewrite:
+            with open(abs_path + 'separate_csv/{}.csv'.format(str(level)+'_l'),'w') as filewrite:
                 writer = csv.writer(filewrite)
                 writer.writerows(filename)
 
     else:
-        with open(r'/Users/apple/Desktop/output/over.csv','w') as filewrite:
+        with open(abs_path + 'separate_csv/over.csv','w') as filewrite:
                 writer = csv.writer(filewrite)
                 writer.writerows(filename)
 
-
+# One class has to set 12 groups students
 level_5 = []
 level_6_low = []
 level_6_high = []
@@ -107,12 +113,12 @@ def add2list(select_num):
 add2list(now_class)
 
 
-#create a main list to save every level's list
+#create a main list to save all groups
 all_list = [level_5,level_6_low ,level_6_high,level_7_low,level_7_high,level_8_low,level_8_high,level_9_low,level_9_high,level_10_low,level_10_high,level_over]
 
 work = Queue()
 
-#put these little list into queue
+#put these groups into queue
 for all in all_list:
     work.put_nowait(all)
 
@@ -122,6 +128,7 @@ def get_task_ele():
     global n
     while not work.empty():
         mylist = work.get_nowait()
+        # call at line 18
         write_each( mylist, n )
         n+=1
         
@@ -135,4 +142,37 @@ for i in range(5):
 
 
 gevent.joinall(job_list)
-print('文件生成成功，请打开文件夹检查')
+print('done!! Please check files in \'separate_csv\'')
+
+#+++++++++++++++++new file here++++++++++++++
+
+#create a filename's list to collect all csvname, so don't put any meaningless file in this direction path
+filename_list = []
+
+#then filtrate  these csv file, get their name to use open(function). 
+
+csv_files_path = abs_path + '/separate_csv/'
+for dir in os.listdir(csv_files_path):
+    if '.csv' in dir:
+        filename_list.append(dir)
+    
+
+for csvname in filename_list:
+    #get every filename and open it
+    with open(csv_files_path + csvname) as read_f:
+        reader = csv.reader(read_f)
+        #sign a string object to combine all wxid with a whole string, for writing in a json file
+        data = ''
+        #wxid uses in collecting all students' wxid
+        wxidlist = []
+        for line in reader:
+            wxidlist.append(line[1])
+        #so we can get each student's wxid an combine it in a string 
+        for wxid in wxidlist:
+            data+='{\"wxid\":'+' \"'+wxid+'\"'+'},'
+        #this string has to be including in a [ ]
+        data='['+data[:-1]+']'
+
+        #write in 
+        with open(abs_path + '/savejson/{}.json'.format(csvname[:-4]), 'w') as f_wxid:
+            f_wxid.write(data)
