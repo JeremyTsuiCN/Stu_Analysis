@@ -69,7 +69,7 @@ COUNT_INDEX = 0
 private_stu = []
 
 # special_word = input('keywords in special students\' name that need private conversation')
-keyword = ['忙忙', '考试', '妈妈', '放弃', '特殊','请假', '周一', '周二', '周三', '周四', '周五', '周六', '周日', '周末','不回复'] 
+keyword = ['忙忙', '考试', '妈妈', '放弃', '特殊','请假', '周一', '周二', '周三', '周四', '周五', '周六', '周日', '周末','不回复', '明天'] 
 
 
 #increase COUNT_INDEX for showing schedule in console log.  
