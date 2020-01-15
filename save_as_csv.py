@@ -20,10 +20,11 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/2010010
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU3ODg5MjE4NywiaWF0IjoxNTc4ODg0OTg3LCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.d_G9_g_YLKOgPShb29ajeBZQ4idEgTrfJRASYy-YL-4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU3OTA4MDY0MiwiaWF0IjoxNTc5MDczNDQyLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.qojbSUKNEzgC5m5jHMVHequVPLMVSjaHoBmBBSb-hGs
 Connection: keep-alive
 Referer: https://prod.pandateacher.com/ninth-studio-future-railway/frontend/
-Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=f7690181957e443b2faca215e25bdaf8|1578885064|1578884986; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU3ODg5MjE4NywiaWF0IjoxNTc4ODg0OTg3LCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.d_G9_g_YLKOgPShb29ajeBZQ4idEgTrfJRASYy-YL-4; locale=zh-CN'''
+Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=d1972a243b4e02b6a433b3790390cf1e|1579073898|1579055059; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU3OTA4MDY0MiwiaWF0IjoxNTc5MDczNDQyLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.qojbSUKNEzgC5m5jHMVHequVPLMVSjaHoBmBBSb-hGs
+TE: Trailers'''
 
 #generate a headers
 headers = dict([line.split(": ", 1) for line in todayheaders.split("\n")])
@@ -56,17 +57,19 @@ writer.writerow(['nickname', 'wxid', 'details', 'level', 'progress', 'learning s
 #create a url that can get each student's data. Then put it into a task
 for studata in get_allstu_group:
     wxid = studata['wxid']
-    status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_th5yqnhdcvzc22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
+    #url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_d4vx8gec8whv22/dc06090326?current_path=%2Fpanel%2Fconductor&is_group=false'
+    status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_d4vx8gec8whv22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
     work.put_nowait(status_url)
 
 #wanna print schedule, so I need this num to check presentage
 num = len(get_allstu_group)
 COUNT_INDEX = 0
 
-#some students need personal conversation, so I make a list
+#some students need personal conversation
 private_stu = []
 
-special_word = input('keywords in special students\' name that need private conversation')
+# special_word = input('keywords in special students\' name that need private conversation')
+keyword = ['忙忙', '考试', '妈妈', '放弃', '特殊','请假', '周一', '周二', '周三', '周四', '周五', '周六', '周日', '周末','不回复'] 
 
 
 #increase COUNT_INDEX for showing schedule in console log.  
@@ -88,11 +91,13 @@ def crawler():
             distance = re.findall(r'#(.*?)句', progress)[0]
         except:
             progress = ''
-        if special_word not in nickname:
-            writer.writerow([nickname, weixin, progress, level, distance])
+        #determine whether any keyword is included in nickname
+        if list( filter(lambda x: x in nickname,keyword) ):
+            private_stu.append([nickname, weixin, progress, level, distance])
             
         else:
-            private_stu.append([nickname, weixin, progress, level, distance])
+            writer.writerow([nickname, weixin, progress, level, distance])
+            
 
         print("\b"*30,end="",flush=True)
         print('sum: {}, process: {:.1f}%'.format(num,100*(COUNT_INDEX/num) ), end="")
@@ -108,8 +113,9 @@ for i in range(5):
 gevent.joinall(task_list)
 
 
-print('general students done！！')
+print('\n general students csv done！！')
 postufile.close()
+
 
 if private_stu:
     with open(abs_path + 'per_con.csv', 'w', newline='') as perfile:

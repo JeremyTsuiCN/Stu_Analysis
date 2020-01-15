@@ -158,21 +158,21 @@ for dir in os.listdir(csv_files_path):
     
 
 for csvname in filename_list:
-    #get every filename and open it
+    #collect every filename and open it
     with open(csv_files_path + csvname) as read_f:
         reader = csv.reader(read_f)
-        #sign a string object to combine all wxid with a whole string, for writing in a json file
+        #to combine all {wxid} s with a whole string, for writing in a json file
         data = ''
         #wxid uses in collecting all students' wxid
         wxidlist = []
         for line in reader:
             wxidlist.append(line[1])
-        #so we can get each student's wxid an combine it in a string 
+        #get each student's wxid and combine it in a string 
         for wxid in wxidlist:
             data+='{\"wxid\":'+' \"'+wxid+'\"'+'},'
         #this string has to be including in a [ ]
         data='['+data[:-1]+']'
 
-        #write in 
+        #write in, cut tail(4 bytes)
         with open(abs_path + '/savejson/{}.json'.format(csvname[:-4]), 'w') as f_wxid:
             f_wxid.write(data)
