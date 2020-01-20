@@ -17,21 +17,31 @@ proxy = {'http': '117.94.182.64'}
 #update browser's headers, Next plan: [try to write in a txt file]
 todayheaders='''accept: application/json, text/plain, */*
 accept-encoding: gzip, deflate, br
-accept-language: zh-CN,zh;q=0.9
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci8yMjQvYXZhdGFyLnBuZyIsImV4cCI6MTU3OTQyODQ3MSwiaWF0IjoxNTc5NDIxMjcxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLpkp_kuabpppkiLCJzdWIiOjIyNCwidW5hbWUiOiJaaG9uZ3NodXhpYW5nIn0.dfBPqFfpV9jXxUPcOo96wHlG9p9GwzB1p2_GU8BA4Nw
-cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2216ca9caf068c96-0ee88f8e9d356-37647e05-1296000-16ca9caf06af75%22%2C%22%24device_id%22%3A%2216ca9caf068c96-0ee88f8e9d356-37647e05-1296000-16ca9caf06af75%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%7D; UM_distinctid=16efa48c81a193-069d633bb3ee13-39637208-13c680-16efa48c81b7c2; CNZZDATA1262709816=405437377-1576151777-%7C1576151777; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci8yMjQvYXZhdGFyLnBuZyIsImV4cCI6MTU3OTQyODQ3MSwiaWF0IjoxNTc5NDIxMjcxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLpkp_kuabpppkiLCJzdWIiOjIyNCwidW5hbWUiOiJaaG9uZ3NodXhpYW5nIn0.dfBPqFfpV9jXxUPcOo96wHlG9p9GwzB1p2_GU8BA4Nw; SERVERID=d1972a243b4e02b6a433b3790390cf1e|1579421654|1579411489
+accept-language: zh-CN,zh;q=0.9,en;q=0.8
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci8zNDQvYXZhdGFyLnBuZyIsImV4cCI6MTU3OTUxOTgzMSwiaWF0IjoxNTc5NTEyNjMxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLlkLTlsrPlqpoiLCJzdWIiOjM0NCwidW5hbWUiOiJ3dXl1ZW1laSJ9.nhD0k-N9So8EAi5eM6wnKKffgaFXHC44VnPzQyGmPLw
+cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22344%22%2C%22%24device_id%22%3A%2216f1dc0629a7c9-047e866f64d4b9-3960720f-1296000-16f1dc0629bb62%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_referrer_host%22%3A%22%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216f1dc0629a7c9-047e866f64d4b9-3960720f-1296000-16f1dc0629bb62%22%7D; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci8zNDQvYXZhdGFyLnBuZyIsImV4cCI6MTU3OTUxOTgzMSwiaWF0IjoxNTc5NTEyNjMxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLlkLTlsrPlqpoiLCJzdWIiOjM0NCwidW5hbWUiOiJ3dXl1ZW1laSJ9.nhD0k-N9So8EAi5eM6wnKKffgaFXHC44VnPzQyGmPLw; SERVERID=d1972a243b4e02b6a433b3790390cf1e|1579513020|1579498206
 referer: https://prod.pandateacher.com/ninth-studio-future-railway/frontend/
 sec-fetch-mode: cors
 sec-fetch-site: same-origin
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'''
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'''
 
 headers = dict([line.split(": ", 1) for line in todayheaders.split("\n")])
 
 #special students' keyword in nicknames 
 keyword = ['忙忙', '考试', '妈妈', '放弃', '特殊','请假', '周一', '周二', '周三', '周四', '周五', '周六', '周日', '周末','不回复', '明天'] 
 
-#Next version: [Try to make direction ]
-abs_path = '/Users/apple/Desktop/op_savecsv/'
+
+def createpath(newpath):
+    try:
+        os.makedirs(newpath)
+    except FileExistsError:
+        print(newpath+'目录存在，可以直接写入文件\n')
+    finally:
+        return newpath
+
+
+
+abs_path = createpath('/Users/apple/Desktop/op_savecsv/')
 work = Queue()
 
 #some students need personal conversation
@@ -45,6 +55,9 @@ num = 0
 end_num = 0
 now_class = 0
 
+
+
+
 #determine class level, return the answer to standard_target
 def get_class():
     while True:
@@ -54,6 +67,7 @@ def get_class():
 
 #send first requests,then get all students' wxid, for creating each student's url. these urls will put into queue.
 #get urls' num and return
+#Next Version ==>  put putnowait action outside this function, for trying to  analysis students situation offline
 def get_wx():
     res = requests.get(first_url2, headers = headers, proxies = proxy)
     data_js = json.loads(res.text)
@@ -68,7 +82,7 @@ def get_wx():
     #create a url that can get each student's data. Then put it into a task
     for studata in get_allstu_group:
         wxid = studata['wxid']
-        #url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_d4vx8gec8whv22/dc06090326?current_path=%2Fpanel%2Fconductor&is_group=false'
+        #url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_d4vx8gec8whv22/dc06090326?current_path=%2Fpanel%2Fconductor&is_group=false's
         status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_d4vx8gec8whv22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
         work.put_nowait(status_url)
 
@@ -119,7 +133,7 @@ def start_task():
     gevent.joinall(task_list)
 
 def write_in():
-    with open(abs_path + 'complete_data.csv', 'w') as crawlfile:
+    with open(abs_path + 'students_in_rail.csv', 'w') as crawlfile:
         writer = csv.writer(crawlfile)
         writer.writerow(['nickname', 'wxid', 'details', 'level', 'progress', 'learning status'])
         writer.writerows(normal_stu)
@@ -140,11 +154,12 @@ def output_csv():
             reader = csv.reader(allwx_file)
             all_names_dict = dict((line[0],line[1]) for line in reader)
 
-        with open(abs_path + 'complete_data.csv') as actwx_file:
+        with open(abs_path + 'students_in_rail.csv') as actwx_file:
             reader = csv.reader(actwx_file)
             act_wxnames = [line[1] for line in reader]
-
-        with open(abs_path + 'stu_not_in_list/miss_stu.csv', 'w') as miss_file:
+        
+        missfile_path = createpath(abs_path + 'miss/')
+        with open(missfile_path+'miss_stu.csv', 'w') as miss_file:
             writer = csv.writer(miss_file)
             for wxname,nickname in all_names_dict.items():
                 if wxname not in act_wxnames:
@@ -182,7 +197,7 @@ for all in all_list:
 
 #read csv's data by line, distinguish, then add to target list
 def add2list():
-    with open(abs_path+'complete_data.csv') as raildata:
+    with open(abs_path+'students_in_rail.csv') as raildata:
         data = raildata.readlines()
     level_num = (int(now_class)-1)*5
 
@@ -227,7 +242,10 @@ def add2list():
         except:
             continue
 
+
+sep_f_path = createpath(abs_path+'separate_csvfile/')
 def write_each(filename, index):
+
     #to distingish between 3 classes. 'index' has to be divided by '2', get step's number 
     if now_class == '2':
         level = math.ceil(index/2) + 5    
@@ -238,23 +256,23 @@ def write_each(filename, index):
 
     #put different datas into target csv
     if index == 0:
-        with open(abs_path + 'separate_csv/bottom.csv','w') as filewrite:
+        with open(sep_f_path+'bottom.csv','w') as filewrite:
             writer = csv.writer(filewrite)
             writer.writerows(filename)
 
     elif 11 > index > 0:    
         #divide the high process and the low
         if index % 2 == 0:
-            with open(abs_path + 'separate_csv/{}.csv'.format(str(level)+'_h'),'w') as filewrite:
+            with open(sep_f_path+'{}.csv'.format(str(level)+'_h'),'w') as filewrite:
                 writer = csv.writer(filewrite)
                 writer.writerows(filename)
         else:
-            with open(abs_path + 'separate_csv/{}.csv'.format(str(level)+'_l'),'w') as filewrite:
+            with open(sep_f_path+'{}.csv'.format(str(level)+'_l'),'w') as filewrite:
                 writer = csv.writer(filewrite)
                 writer.writerows(filename)
 
     else:
-        with open(abs_path + 'separate_csv/over.csv','w') as filewrite:
+        with open(sep_f_path+'over.csv','w') as filewrite:
             writer = csv.writer(filewrite)
             writer.writerows(filename)
 
@@ -281,15 +299,14 @@ def write_injson():
     #create a filename's list to collect all csvname, so don't put any meaningless file in this direction path
     filename_list = []
     #then filtrate  these csv file, get their name to use open(function). 
-    csv_files_path = abs_path + '/separate_csv/'
-    for dir in os.listdir(csv_files_path):
+    for dir in os.listdir(sep_f_path):
         if '.csv' in dir:
             filename_list.append(dir)
         
-
+    json_path = createpath(abs_path+'savejson/')
     for csvname in filename_list:
         #collect every filename and open it
-        with open(csv_files_path + csvname) as read_f:
+        with open(sep_f_path + csvname) as read_f:
             reader = csv.reader(read_f)
             #to combine all {wxid} s with a whole string, for writing in a json file
             data = ''
@@ -304,7 +321,8 @@ def write_injson():
             data='['+data[:-1]+']'
 
         #write in, cut tail(4 bytes)
-        with open(abs_path + '/savejson/{}.json'.format(csvname[:-4]), 'w') as f_wxid:
+    
+        with open(json_path + '{}.json'.format(csvname[:-4]), 'w') as f_wxid:
             f_wxid.write(data)
     print('All json files created successfully!!!')
             
@@ -326,6 +344,8 @@ def start_job():
     add2list()
     create_json_task()
     write_injson()
-    
+
+
+
 if __name__ == "__main__":
     start_job()
