@@ -15,15 +15,16 @@ first_url2 = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-bac
 proxy = {'http': '117.94.182.64'}
 
 #update browser's headers, Next plan: [try to write in a txt file]
-todayheaders='''accept: application/json, text/plain, */*
-accept-encoding: gzip, deflate, br
-accept-language: zh-CN,zh;q=0.9,en;q=0.8
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci8zNDQvYXZhdGFyLnBuZyIsImV4cCI6MTU3OTUxOTgzMSwiaWF0IjoxNTc5NTEyNjMxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLlkLTlsrPlqpoiLCJzdWIiOjM0NCwidW5hbWUiOiJ3dXl1ZW1laSJ9.nhD0k-N9So8EAi5eM6wnKKffgaFXHC44VnPzQyGmPLw
-cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22344%22%2C%22%24device_id%22%3A%2216f1dc0629a7c9-047e866f64d4b9-3960720f-1296000-16f1dc0629bb62%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_referrer_host%22%3A%22%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216f1dc0629a7c9-047e866f64d4b9-3960720f-1296000-16f1dc0629bb62%22%7D; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci8zNDQvYXZhdGFyLnBuZyIsImV4cCI6MTU3OTUxOTgzMSwiaWF0IjoxNTc5NTEyNjMxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLlkLTlsrPlqpoiLCJzdWIiOjM0NCwidW5hbWUiOiJ3dXl1ZW1laSJ9.nhD0k-N9So8EAi5eM6wnKKffgaFXHC44VnPzQyGmPLw; SERVERID=d1972a243b4e02b6a433b3790390cf1e|1579513020|1579498206
-referer: https://prod.pandateacher.com/ninth-studio-future-railway/frontend/
-sec-fetch-mode: cors
-sec-fetch-site: same-origin
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'''
+todayheaders='''Host: prod.pandateacher.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MDYxOTkwMiwiaWF0IjoxNTgwNjEyNzAyLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.yc8V1-R7XJ-OqD79lJRqHM3GoYCv--VGLmwgRMBf47s
+Connection: keep-alive
+Referer: https://prod.pandateacher.com/ninth-studio-future-railway/frontend/
+Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=f7690181957e443b2faca215e25bdaf8|1580617507|1580612701; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MDYxOTkwMiwiaWF0IjoxNTgwNjEyNzAyLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.yc8V1-R7XJ-OqD79lJRqHM3GoYCv--VGLmwgRMBf47s; locale=zh-CN
+TE: Trailers'''
 
 headers = dict([line.split(": ", 1) for line in todayheaders.split("\n")])
 
@@ -44,7 +45,9 @@ def createpath(newpath):
 abs_path = createpath('/Users/apple/Desktop/op_savecsv/')
 work = Queue()
 
-#some students need personal conversation
+#some students need personal conversation 
+# +++++Change now+++++ need to append some student
+supply_stu = []
 private_stu = []
 normal_stu = []
 
@@ -67,7 +70,7 @@ def get_class():
 
 #send first requests,then get all students' wxid, for creating each student's url. these urls will put into queue.
 #get urls' num and return
-#Next Version ==>  put putnowait action outside this function, for trying to  analysis students situation offline
+#Next Version ==>  put putnowait action outside this function, for trying to analysis students situation offline
 def get_wx():
     res = requests.get(first_url2, headers = headers, proxies = proxy)
     data_js = json.loads(res.text)
@@ -108,11 +111,11 @@ def crawler():
         except:
             progress = ''
 
-        #determine whether any keyword is included in nickname
+        
         if progress == '':
             level,distance = '无数据','无数据'
             private_stu.append([nickname, weixin, progress, level, distance])
-
+        #determine whether any keyword is included in nickname
         elif int(level) >= standard_target and int(distance)==end_num:
             normal_stu.append([nickname, weixin, progress, level, distance])
 
