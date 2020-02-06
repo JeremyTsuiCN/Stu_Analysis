@@ -20,23 +20,23 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/2010010
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MDYxOTkwMiwiaWF0IjoxNTgwNjEyNzAyLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.yc8V1-R7XJ-OqD79lJRqHM3GoYCv--VGLmwgRMBf47s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MDk3MzE5MywiaWF0IjoxNTgwOTY1OTkzLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.ZeAGKjLHyvO7tIX3SotYxn9r_F6xf4QlBN5_Av5OW5c
 Connection: keep-alive
 Referer: https://prod.pandateacher.com/ninth-studio-future-railway/frontend/
-Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=f7690181957e443b2faca215e25bdaf8|1580617507|1580612701; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MDYxOTkwMiwiaWF0IjoxNTgwNjEyNzAyLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.yc8V1-R7XJ-OqD79lJRqHM3GoYCv--VGLmwgRMBf47s; locale=zh-CN
+Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=3847ab526202584eee1fed82128f885c|1580968576|1580958788; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MDk3MzE5MywiaWF0IjoxNTgwOTY1OTkzLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.ZeAGKjLHyvO7tIX3SotYxn9r_F6xf4QlBN5_Av5OW5c
 TE: Trailers'''
 
 headers = dict([line.split(": ", 1) for line in todayheaders.split("\n")])
 
 #special students' keyword in nicknames 
-keyword = ['忙忙', '考试', '妈妈', '放弃', '特殊','请假', '周一', '周二', '周三', '周四', '周五', '周六', '周日', '周末','不回复', '明天'] 
+keyword = ['忙忙', '考试', '妈妈', '放弃', '特殊','请假', '周一', '周二', '周三', '周四', '周五', '周六', '周日', '周末','不回复', '自节奏'] 
 
 
 def createpath(newpath):
     try:
         os.makedirs(newpath)
     except FileExistsError:
-        print(newpath+'目录存在，可以直接写入文件\n')
+        print(newpath+' exists \n')
     finally:
         return newpath
 
@@ -46,17 +46,18 @@ abs_path = createpath('/Users/apple/Desktop/op_savecsv/')
 work = Queue()
 
 #some students need personal conversation 
-# +++++Change now+++++ need to append some student
-supply_stu = []
+
 private_stu = []
 normal_stu = []
 
-#increase COUNT_INDEX for showing schedule in console log.  
+#increase COUNT_INDEX & num for showing schedule in console log. 
 COUNT_INDEX = 0
 standard_target = 0
 num = 0
 end_num = 0
 now_class = 0
+# '山脚'level needs to learn 6 tests, others needs 5
+miss_num = 5 
 
 
 
@@ -82,15 +83,25 @@ def get_wx():
         print('Headers had updated, please copy a new one and run again!!')
         exit()
 
-    #create a url that can get each student's data. Then put it into a task
+    #create a url that can get each student's data. Then put it into a task, 
+    #should update this url periodically to avoid potential errors.
     for studata in get_allstu_group:
         wxid = studata['wxid']
-        #url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_d4vx8gec8whv22/dc06090326?current_path=%2Fpanel%2Fconductor&is_group=false's
-        status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_d4vx8gec8whv22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
+        status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_sqin1b8axidb22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
         work.put_nowait(status_url)
 
     #wanna print schedule, so I need this num to check presentage
     return len(get_allstu_group)
+
+
+#before we catch info, we need to prevent railway system missing data, so we 
+#supplement complete table of data from 'all_names.csv'
+#get complete standard data( without details and notedname)
+with open(abs_path + 'all_names.csv') as allwx_file:
+    reader = csv.reader(allwx_file)
+    all_names_dict = dict((line[0],line[8]) for line in reader)
+
+
 
 #each task , increases COUNT_INDEX to print percentage of getting data's schedule
 def crawler():
@@ -108,18 +119,23 @@ def crawler():
             progress = info['progress']
             level = re.findall(r'第(.*?)课', progress)[0]
             distance = re.findall(r'#(.*?)句', progress)[0]
-        except:
-            progress = ''
 
-        
-        if progress == '':
-            level,distance = '无数据','无数据'
-            private_stu.append([nickname, weixin, progress, level, distance])
+        except (KeyError,IndexError):
+            try:
+                level =  miss_num - int(all_names_dict[weixin]) + ((now_class - 1) * 5)
+                progress = ''
+                distance = '2'
+            except KeyError:
+                print(weixin+'NOT FOUND')
+
+        except UnboundLocalError:
+            return None  
+
         #determine whether any keyword is included in nickname
-        elif int(level) >= standard_target and int(distance)==end_num:
+        if int(level) >= standard_target:
             normal_stu.append([nickname, weixin, progress, level, distance])
 
-        elif list( filter(lambda x: x in nickname,keyword)): 
+        elif list( filter(lambda x: x in nickname,keyword )): 
             private_stu.append([nickname, weixin, progress, level, distance])
 
         else:
@@ -140,7 +156,7 @@ def write_in():
         writer = csv.writer(crawlfile)
         writer.writerow(['nickname', 'wxid', 'details', 'level', 'progress', 'learning status'])
         writer.writerows(normal_stu)
-    print('write in all students in this train complete!!\n')
+    print('\nWrite in all students in this train successful!!')
 
 def output_csv():
     if private_stu:
@@ -148,25 +164,35 @@ def output_csv():
             writer = csv.writer(perfile)
             writer.writerow(['nickname', 'wxid', 'details', 'level', 'progress', 'learning status'])
             writer.writerows(private_stu)
-        print('Write in special students successful!!!\n\n')
+        print('Write in special students successful!!')
+        pri_wxid = [line[1] for line in private_stu]
+
     else:
-        print('Empty special students list !!!')
+        print('None special student catched!!!  Maybe you should update 【start_url】')
 
     try:
         with open(abs_path + 'all_names.csv') as allwx_file:
             reader = csv.reader(allwx_file)
-            all_names_dict = dict((line[0],line[1]) for line in reader)
+            #all_names.csv 的顺序是 wxid nickname 
+            all_names_dict = dict( (line[0],line[1]) for line in reader ) 
 
         with open(abs_path + 'students_in_rail.csv') as actwx_file:
             reader = csv.reader(actwx_file)
-            act_wxnames = [line[1] for line in reader]
-        
+            #列车的顺序是 nickname wxid
+            act_wxnames = dict( (line[1],line[0]) for line in reader ) 
+            
+        #Gather all students you can contact
+        effective_stu = set(pri_wxid + [names for names in act_wxnames])
+
         missfile_path = createpath(abs_path + 'miss/')
+
+        #student can't be contacted, write in [miss_stu.csv] 
         with open(missfile_path+'miss_stu.csv', 'w') as miss_file:
             writer = csv.writer(miss_file)
-            for wxname,nickname in all_names_dict.items():
-                if wxname not in act_wxnames:
-                    writer.writerow([wxname,nickname])
+            for wxname in all_names_dict:
+                if wxname not in effective_stu:
+                    writer.writerow([wxname,all_names_dict[wxname]])
+
         print('All csvs had generated successfully~~~')
         
     except FileNotFoundError:
@@ -178,20 +204,20 @@ def output_csv():
     print('Separate 3 status students in csv~\n')
 
 # One class has to set 12 groups students
-level_5 = []
-level_6_low = []
-level_6_high = []
-level_7_low = []
-level_7_high = []
-level_8_low = []
-level_8_high = []
-level_9_low = []
-level_9_high = []
-level_10_low = []
-level_10_high = []
+level_bottom = []
+level_first_low = []
+level_first_high = []
+level_second_low = []
+level_second_high = []
+level_third_low = []
+level_third_high = []
+level_forth_low = []
+level_forth_high = []
+level_fifth_low = []
+level_fifth_high = []
 level_over = []
 #create a main list to save all groups, name a list, and it will get a 'n' to mark it's index.
-all_list = [level_5,level_6_low ,level_6_high,level_7_low,level_7_high,level_8_low,level_8_high,level_9_low,level_9_high,level_10_low,level_10_high,level_over]
+all_list = [level_bottom,level_first_low ,level_first_high,level_second_low,level_second_high,level_third_low,level_third_high,level_forth_low,level_forth_high,level_fifth_low,level_fifth_high,level_over]
 
 work2 = Queue()
 #put these groups into queue
@@ -199,46 +225,48 @@ for all in all_list:
     work2.put_nowait(all)
 
 #read csv's data by line, distinguish, then add to target list
-def add2list():
+def add2list(end_num_list):
     with open(abs_path+'students_in_rail.csv') as raildata:
         data = raildata.readlines()
     level_num = (int(now_class)-1)*5
 
+
     for eachline in data:
         line = eachline.split(',')
         try:
+            #bottom level 
             if int(line[3]) == level_num:
-                level_5.append(line)
+                level_bottom.append(line)
 
             elif int(line[3]) == level_num+1:
-                if int(line[4]) < 70:
-                    level_6_low.append(line)
+                if int(line[4]) < end_num_list[1]:
+                    level_first_low.append(line)
                 else:
-                    level_6_high.append(line)
+                    level_first_high.append(line)
 
             elif int(line[3]) == level_num+2:
-                if int(line[4]) < 70:
-                    level_7_low.append(line)
+                if int(line[4]) < end_num_list[2]:
+                    level_second_low.append(line)
                 else:
-                    level_7_high.append(line)
+                    level_second_high.append(line)
 
             elif int(line[3]) == level_num+3:
-                if int(line[4])<70:
-                    level_8_low.append(line)
+                if int(line[4])<end_num_list[3]:
+                    level_third_low.append(line)
                 else:
-                    level_8_high.append(line)
+                    level_third_high.append(line)
 
             elif int(line[3]) == level_num+4:
-                if int(line[4])<70:
-                    level_9_low.append(line)
+                if int(line[4]) < end_num_list[4]:
+                    level_forth_low.append(line)
                 else:
-                    level_9_high.append(line)
+                    level_forth_high.append(line)
 
             elif int(line[3]) == level_num+5:
-                if int(line[4]) < end_num:
-                    level_10_low.append(line)
+                if int(line[4]) < end_num_list[5]:
+                    level_fifth_low.append(line)
                 else:
-                    level_10_high.append(line)
+                    level_fifth_high.append(line)
 
             elif int(line[3]) > level_num+5:
                 level_over.append(line)
@@ -330,21 +358,21 @@ def write_injson():
     print('All json files created successfully!!!')
             
 def start_job():
-    global standard_target,num,end_num,now_class
+    global standard_target, num, end_num, now_class, miss_num
     now_class = get_class() 
     standard_target = now_class * 5
-    if standard_target == 5:
-        end_num = 158
-    elif standard_target == 10:
-        end_num = 205
-    else:
-        end_num = 147
+    level1_end_num = [202, 238, 172, 151, 178, 158]
+    # 120 100 need to change right numbers!!
+    level2_end_num = [158, 149, 138, 120, 254, 205]
+    level3_end_num = [205, 100, 100, 133, 100, 226]
+
+    end_num_list = [level1_end_num, level2_end_num, level3_end_num]
 
     num = get_wx()
     start_task()
     write_in()
     output_csv()
-    add2list()
+    add2list(end_num_list[now_class - 1 ])
     create_json_task()
     write_injson()
 
