@@ -27,19 +27,21 @@ from queue import Queue
 import requests, json, csv, gevent, re, math
 
 #get ready for the first requests
-first_url2 = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/chats/panels/10/modules?current_path=%2F%252Fpanel%252Fconductor'
-proxy = {'http': '117.94.182.64'}
+# first_url2 = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/chats/panels/10/modules?current_path=%2F%252Fpanel%252Fconductor'
+first_url2 = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/chats/panels/10/modules?current_path=%2Fpanel%2Fconductor'
+
+
 
 #update browser's headers, Next plan: [try to write in a txt file]
 todayheaders='''Host: prod.pandateacher.com
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:72.0) Gecko/20100101 Firefox/72.0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:73.0) Gecko/20100101 Firefox/73.0
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MTczODk2NSwiaWF0IjoxNTgxNzMxNzY1LCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.skrmsx0ByD4f2g20s5XNfbTh-sVo4Pf5625RrWEvqqE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MzEyMDUwMCwiaWF0IjoxNTgzMTEzMzAwLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.T0Y335qW3ClylTt-OojJaf2LMGHiiVXp2YCwj0Q4lCw
 Connection: keep-alive
 Referer: https://prod.pandateacher.com/ninth-studio-future-railway/frontend/
-Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=d1972a243b4e02b6a433b3790390cf1e|1581731775|1581731764; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MTczODk2NSwiaWF0IjoxNTgxNzMxNzY1LCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.skrmsx0ByD4f2g20s5XNfbTh-sVo4Pf5625RrWEvqqE; locale=zh-CN
+Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=3847ab526202584eee1fed82128f885c|1583115104|1583113297; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MzEyMDUwMCwiaWF0IjoxNTgzMTEzMzAwLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.T0Y335qW3ClylTt-OojJaf2LMGHiiVXp2YCwj0Q4lCw
 TE: Trailers'''
 
 headers = dict([line.split(": ", 1) for line in todayheaders.split("\n")])
@@ -53,6 +55,7 @@ work = Queue()
 #some students need personal conversation 
 private_stu = []
 normal_stu = []
+miss_stu = []
 
 #increase COUNT_INDEX & num for showing schedule in console log. 
 COUNT_INDEX = 0
@@ -75,7 +78,7 @@ def get_class():
 #get urls' num and return
 #Next Version ==>  put putnowait action outside this function, for trying to analysis students situation offline
 def get_wx():
-    res = requests.get(first_url2, headers = headers, proxies = proxy)
+    res = requests.get(first_url2, headers = headers)
     data_js = json.loads(res.text)
 
     #collect data I need(only wxid)
@@ -89,8 +92,8 @@ def get_wx():
     #should update this url periodically to avoid potential errors.
     for studata in get_allstu_group:
         wxid = studata['wxid']
-        # status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_sqin1b8axidb22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
-        status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_ii0h8a2zxqud22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
+
+        status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_th5yqnhdcvzc22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
         work.put_nowait(status_url)
 
     #wanna print schedule, so I need this num to check presentage
@@ -117,7 +120,7 @@ def crawler():
     while not work.empty():
         COUNT_INDEX += 1
         url = work.get_nowait()
-        res2 = requests.get(url, headers = headers, proxies = proxy)
+        res2 = requests.get(url, headers = headers)
         res_json = res2.json()
         weixin = res_json['data']['wxid']
         nickname = res_json['data']['nickname']
@@ -128,7 +131,7 @@ def crawler():
             level = re.findall(r'第(.*?)课', progress)[0]
             distance = re.findall(r'#(.*?)句', progress)[0]
 
-        except (KeyError,IndexError):
+        except KeyError:
             try:
                 level =  miss_num - int(all_names_dict[weixin]) + ((now_class - 1) * 5)
                 progress = ''
@@ -142,6 +145,7 @@ def crawler():
                 else:
                     progress = ''
                     distance = 0
+
 
         except UnboundLocalError:
             return None  
@@ -172,7 +176,8 @@ def output_csv():
         writer = csv.writer(crawlfile)
         writer.writerow(['nickname', 'wxid', 'details', 'level', 'progress', 'learning status'])
         writer.writerows(normal_stu)
-    print('\nWrite in all students in this train successful!!')
+
+    print('\n\nWrite in all students in this train successful!!\n\n')
     act_wxnames = dict( (line[1],line[0]) for line in normal_stu )
 
     if private_stu:
@@ -183,6 +188,7 @@ def output_csv():
         print('Write in special students successful!!')
         pri_wxid = [line[1] for line in private_stu]
     else:
+        pri_wxid = []
         print('None special student catched!!! If keyword only 特殊, should updata url')
 
             
@@ -196,6 +202,9 @@ def output_csv():
         for wxid in all_names_dict:
             if wxid not in effective_stu:
                 writer.writerow([wxid,all_names_dict[wxid]])
+
+        writer.writerow(['新的一行','学员名册'])
+        writer.writerows(miss_stu)
 
     print('All csvs had generated successfully~~~')
 
@@ -364,10 +373,11 @@ def start_job():
     global standard_target, num, end_num, now_class, miss_num
     now_class = get_class() 
     standard_target = now_class * 5
-    level1_end_num = [202, 238, 172, 151, 178, 158]
+    level1_end_num = [202, 120, 120, 120, 120, 158]
     # 120 100 need to change right numbers!!
     level2_end_num = [158, 120, 120, 120, 200, 205]
-    level3_end_num = [205, 120, 120, 120, 120, 226]
+
+    level3_end_num = [205, 100, 120, 120, 120, 226]
 
     end_num_list = [level1_end_num, level2_end_num, level3_end_num]
     num = get_wx()
