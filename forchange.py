@@ -8,7 +8,6 @@ __author__ = 'Jeremy Tsui'
 
 import os
 
-
 def createpath(newpath):
     try:
         os.makedirs(newpath)
@@ -38,16 +37,16 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:73.0) Gecko/2010010
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MzEyMDUwMCwiaWF0IjoxNTgzMTEzMzAwLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.T0Y335qW3ClylTt-OojJaf2LMGHiiVXp2YCwj0Q4lCw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MzE1MDI5MSwiaWF0IjoxNTgzMTQzMDkxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.WPq5zGn_x0Sg3u2Ij6fIDtkDwGZ2Vi3Dj4WpgMntxuU
 Connection: keep-alive
 Referer: https://prod.pandateacher.com/ninth-studio-future-railway/frontend/
-Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=3847ab526202584eee1fed82128f885c|1583115104|1583113297; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MzEyMDUwMCwiaWF0IjoxNTgzMTEzMzAwLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.T0Y335qW3ClylTt-OojJaf2LMGHiiVXp2YCwj0Q4lCw
+Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=3847ab526202584eee1fed82128f885c|1583143333|1583113297; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MzE1MDI5MSwiaWF0IjoxNTgzMTQzMDkxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.WPq5zGn_x0Sg3u2Ij6fIDtkDwGZ2Vi3Dj4WpgMntxuU
 TE: Trailers'''
 
 headers = dict([line.split(": ", 1) for line in todayheaders.split("\n")])
 
 #special students' keyword in nicknames 
-keyword = ['忙忙', '考试', '放弃','请假', '周一', '周二', '周三', '周四', '周五', '周六', '周日', '周末','不回复', '自节奏'] 
+keyword = ['忙忙', '考试', '放弃','请假', '周一', '周二', '周三', '周四', '周五', '周六', '周日', '周末','不回复', '自节奏', '私聊'] 
 
 
 work = Queue()
@@ -77,37 +76,56 @@ def get_class():
 #send first requests,then get all students' wxid, for creating each student's url. these urls will put into queue.
 #get urls' num and return
 #Next Version ==>  put putnowait action outside this function, for trying to analysis students situation offline
+# def get_wx():
+#     res = requests.get(first_url2, headers = headers)
+#     data_js = json.loads(res.text)
+
+#     #collect data I need(only wxid)
+#     try:
+#         get_allstu_group = data_js['data']['lists'][1]['lists']
+#     except:
+#         print('Headers had updated, please copy a new one and run again!!')
+#         exit()
+
+#     #create a url that can get each student's data. Then put it into a task, 
+#     #should update this url periodically to avoid potential errors.
+#     for studata in get_allstu_group:
+#         wxid = studata['wxid']
+
+#         status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_th5yqnhdcvzc22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
+#         work.put_nowait(status_url)
+
+#     #wanna print schedule, so I need this num to check presentage
+#     return len(get_allstu_group)
+
 def get_wx():
     res = requests.get(first_url2, headers = headers)
     data_js = json.loads(res.text)
 
     #collect data I need(only wxid)
     try:
-        get_allstu_group = data_js['data']['lists'][1]['lists']
+        data_js['data']['lists'][1]['lists']
     except:
         print('Headers had updated, please copy a new one and run again!!')
         exit()
 
-    #create a url that can get each student's data. Then put it into a task, 
-    #should update this url periodically to avoid potential errors.
-    for studata in get_allstu_group:
-        wxid = studata['wxid']
-
-        status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_th5yqnhdcvzc22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
+    for studata in all_names_dict:
+        status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_th5yqnhdcvzc22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(studata)
         work.put_nowait(status_url)
 
     #wanna print schedule, so I need this num to check presentage
-    return len(get_allstu_group)
+    return len(all_names_dict)
 
 
 #before we catch info, we need to prevent railway system missing data, so we 
 #supplement complete table of data from 'all_names.csv'
-#get complete standard data( without details and notedname)
+
+#return a dict=> key: wxid, value[0]: schedule, value[1]: nickname
 def get_sys_data():
     try:
         with open(abs_path + 'all_names.csv') as allwx_file:
             reader = csv.reader(allwx_file)
-            return dict((line[0],line[8]) for line in reader)
+            return dict((line[0],[line[8],line[1]]) for line in reader)
     except FileNotFoundError:
         print('You miss some documents......please check\n\n')
     except UnicodeDecodeError:
@@ -122,7 +140,11 @@ def crawler():
         url = work.get_nowait()
         res2 = requests.get(url, headers = headers)
         res_json = res2.json()
-        weixin = res_json['data']['wxid']
+        try:
+            weixin = res_json['data']['wxid']
+        except TypeError:
+            return None
+
         nickname = res_json['data']['nickname']
         info = res_json['data']['current_train_info']
         
@@ -130,25 +152,24 @@ def crawler():
             progress = info['progress']
             level = re.findall(r'第(.*?)课', progress)[0]
             distance = re.findall(r'#(.*?)句', progress)[0]
-
-        except KeyError:
+        except (KeyError,IndexError):
             try:
-                level =  miss_num - int(all_names_dict[weixin]) + ((now_class - 1) * 5)
-                progress = ''
-                nickname += ' 无数据'
+                level =  miss_num - int(all_names_dict[weixin][0]) + ((now_class - 1) * 5)
+                progress = '无数据'
+                nickname = all_names_dict[weixin][1] + ' 无数据私聊'
             except KeyError:
                 print(weixin+'NOT FOUND')
                 return None
             finally:
-                if int(all_names_dict[weixin]) == 0:
+                if int(all_names_dict[weixin][0]) == 0:
                     distance = 300
                 else:
                     progress = ''
                     distance = 0
 
-
         except UnboundLocalError:
             return None  
+
 
         #determine whether any keyword is included in nickname
         if int(level) >= standard_target:
@@ -270,7 +291,7 @@ def add2list(end_num_list):
             if int(line[4]) < end_num_list[5]-10:
                 level_fifth_low.append(line)
             elif end_num_list[5]-10 < int(line[4]) < end_num_list[5]:
-                if int(all_names_dict[line[1]]) == 0:
+                if int(all_names_dict[line[1]][0]) == 0:
                     level_fifth_high.append(line)
                 else:
                     suspected.append(line)
