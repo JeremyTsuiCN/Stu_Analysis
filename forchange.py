@@ -26,21 +26,20 @@ from queue import Queue
 import requests, json, csv, gevent, re, math
 
 #get ready for the first requests
-# first_url2 = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/chats/panels/10/modules?current_path=%2F%252Fpanel%252Fconductor'
 first_url2 = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/chats/panels/10/modules?current_path=%2Fpanel%2Fconductor'
 
 
 
 #update browser's headers, Next plan: [try to write in a txt file]
 todayheaders='''Host: prod.pandateacher.com
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:73.0) Gecko/20100101 Firefox/73.0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:74.0) Gecko/20100101 Firefox/74.0
 Accept: application/json, text/plain, */*
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate, br
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MzE1MDI5MSwiaWF0IjoxNTgzMTQzMDkxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.WPq5zGn_x0Sg3u2Ij6fIDtkDwGZ2Vi3Dj4WpgMntxuU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4NTIyMzUzMiwiaWF0IjoxNTg1MjE2MzMyLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.IbXPpBfV6N-jLOBRbWHj36EF_f0HfcRUZRakZiuX5RQ
 Connection: keep-alive
 Referer: https://prod.pandateacher.com/ninth-studio-future-railway/frontend/
-Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; SERVERID=3847ab526202584eee1fed82128f885c|1583143333|1583113297; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4MzE1MDI5MSwiaWF0IjoxNTgzMTQzMDkxLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.WPq5zGn_x0Sg3u2Ij6fIDtkDwGZ2Vi3Dj4WpgMntxuU
+Cookie: sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22obmqi1Px1ozjOic9rMfYzI2fD87s%22%2C%22%24device_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%2216dc975ec5afa-033c310891cf5a8-4a5b66-1764000-16dc975ec5b4aa%22%7D; locale=zh-CN; prod-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXIiOiJodHRwczovL2dpdC5mb3JjaGFuZ2UuY24vdXBsb2Fkcy8tL3N5c3RlbS91c2VyL2F2YXRhci80OTAvYXZhdGFyLnBuZyIsImV4cCI6MTU4NTIyMzUzMiwiaWF0IjoxNTg1MjE2MzMyLCJpc3MiOiJsd3JEekJhN1FEOGJ4OU8wSDF5N2lUT1R4ZGdQRE16YSIsIm5hbWUiOiLltJTkv4rmnbAiLCJzdWIiOjQ5MCwidW5hbWUiOiJjdWlqdW5qaWUifQ.IbXPpBfV6N-jLOBRbWHj36EF_f0HfcRUZRakZiuX5RQ
 TE: Trailers'''
 
 headers = dict([line.split(": ", 1) for line in todayheaders.split("\n")])
@@ -76,27 +75,7 @@ def get_class():
 #send first requests,then get all students' wxid, for creating each student's url. these urls will put into queue.
 #get urls' num and return
 #Next Version ==>  put putnowait action outside this function, for trying to analysis students situation offline
-# def get_wx():
-#     res = requests.get(first_url2, headers = headers)
-#     data_js = json.loads(res.text)
 
-#     #collect data I need(only wxid)
-#     try:
-#         get_allstu_group = data_js['data']['lists'][1]['lists']
-#     except:
-#         print('Headers had updated, please copy a new one and run again!!')
-#         exit()
-
-#     #create a url that can get each student's data. Then put it into a task, 
-#     #should update this url periodically to avoid potential errors.
-#     for studata in get_allstu_group:
-#         wxid = studata['wxid']
-
-#         status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_th5yqnhdcvzc22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(wxid)
-#         work.put_nowait(status_url)
-
-#     #wanna print schedule, so I need this num to check presentage
-#     return len(get_allstu_group)
 
 def get_wx():
     res = requests.get(first_url2, headers = headers)
@@ -110,7 +89,7 @@ def get_wx():
         exit()
 
     for studata in all_names_dict:
-        status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_th5yqnhdcvzc22/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(studata)
+        status_url = 'https://prod.pandateacher.com/ninth-studio-future-railway/base-backend/conductor/buddy/wxid_8kskqqw585ri12/{}?current_path=%2Fpanel%2Fconductor&is_group=false'.format(studata)
         work.put_nowait(status_url)
 
     #wanna print schedule, so I need this num to check presentage
@@ -199,7 +178,7 @@ def output_csv():
         writer.writerows(normal_stu)
 
     print('\n\nWrite in all students in this train successful!!\n\n')
-    act_wxnames = dict( (line[1],line[0]) for line in normal_stu )
+    # act_wxnames = dict( (line[1],line[0]) for line in normal_stu )
 
     if private_stu:
         with open(abs_path + 'per_con.csv', 'w', newline='') as perfile:
@@ -207,25 +186,25 @@ def output_csv():
             writer.writerow(['nickname', 'wxid', 'details', 'level', 'progress', 'learning status'])
             writer.writerows(private_stu)
         print('Write in special students successful!!')
-        pri_wxid = [line[1] for line in private_stu]
+        # pri_wxid = [line[1] for line in private_stu]
     else:
-        pri_wxid = []
+        # pri_wxid = []
         print('None special student catched!!! If keyword only 特殊, should updata url')
 
             
     #Gather all students you can contact
-    effective_stu = set(pri_wxid + [wx for wx in act_wxnames])
-    missfile_path = createpath(abs_path + 'miss/')
+    # effective_stu = set(pri_wxid + [wx for wx in act_wxnames])
+    # missfile_path = createpath(abs_path + 'miss/')
     #student can't be contacted, write in [miss_stu.csv] 
     #all_names.csv 的顺序是 0wxid 1nickname 
-    with open(missfile_path+'miss_stu.csv', 'w') as miss_file:
-        writer = csv.writer(miss_file)
-        for wxid in all_names_dict:
-            if wxid not in effective_stu:
-                writer.writerow([wxid,all_names_dict[wxid]])
+    # with open(missfile_path+'miss_stu.csv', 'w') as miss_file:
+    #     writer = csv.writer(miss_file)
+    #     for wxid in all_names_dict:
+    #         if wxid not in effective_stu:
+    #             writer.writerow([wxid,all_names_dict[wxid]])
 
-        writer.writerow(['新的一行','学员名册'])
-        writer.writerows(miss_stu)
+
+        # writer.writerows(miss_stu)
 
     print('All csvs had generated successfully~~~')
 
